@@ -1,0 +1,67 @@
+/* app/assets/stylesheets/components/navbar.scss */
+.navbar-lewagon {
+  justify-content: space-between;
+  background: rgb(123, 94, 94);
+  position: relative;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 60px;
+  z-index: 1050;
+}
+
+.navbar-lewagon .navbar-brand h1 {
+
+  width: 100%;
+  margin: 0 auto;
+  max-height: 50px;
+  object-fit: contain;
+  color: white;
+  font-weight: 900;
+  font-size: 1rem;
+  text-align: center;
+
+}
+
+.navbar-toggler {
+  border: 1px solid white;
+
+  i {
+    color: white;
+  }
+}
+
+// .navbar-toggler {
+//   position: absolute;
+//   // left: 10px;
+//   // top: 10px;
+
+//   button span {
+//     color: white;
+//   }
+// }
+
+// .btn-outline-secondary {
+//   position: absolute;
+//   right: 10px;
+//   top: 10px;
+//   z-index: 1100;
+// }
+
+// .navbar-nav {
+//   width: 100%;
+// }
+
+// .nav-item {
+//   width: 100%;
+//   text-align: center;
+//   padding: 10px 0;
+// }
+
+// .logo-small {
+//   height: 35px;
+// }

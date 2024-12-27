@@ -1,0 +1,31 @@
+.navbar-menu {
+  width: 60% !important;
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+
+    i {
+      color: rgb(123, 94, 94);
+    }
+
+    a {
+      color: rgb(123, 94, 94);
+      font-weight: 900;
+    }
+
+  }
+
+}
+
+.menu-image {
+  padding-left: 25%;
+}
+
+#badge-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
