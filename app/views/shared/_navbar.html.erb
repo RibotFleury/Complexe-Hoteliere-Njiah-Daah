@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <%= link_to root_path, class: "navbar-brand mx-auto" do %>
+      <h1>Residence Hoteliere Njiah Daah</h1>
+    <% end %>
+    <%= image_tag "user.png", class: "avatar", alt: "avatar" %>
+    <%= render "shared/navbar-menu" %>
+  </div>
+</nav>
