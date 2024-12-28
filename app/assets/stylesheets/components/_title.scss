@@ -1,0 +1,17 @@
+// @font-face {
+//   font-family: "josefin-bold";
+//   src: url(../../fonts/JosefinSans-Bold.ttf);
+// }
+
+.page-title {
+  color: var(--color2);
+  background-color: var(--color1);
+  padding: 10px;
+  margin-top: 20px;
+
+  h1 {
+    font-family: "josefin-bold", sans-serif;
+    // font-weight: 800;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,32 @@
+form {
+  margin-top: 20px;
+
+  label {
+    color: var(--color1);
+
+  }
+
+  select,
+  input,
+  button {
+    font-family: "josefin-regular", sans-serif;
+  }
+
+  .button-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #annuler {
+    color: var(--color2);
+    background-color: rgb(237, 94, 94);
+    border: none;
+  }
+
+  #reserver {
+    color: var(--color2);
+    background-color: var(--color1);
+    border: none;
+  }
+}
