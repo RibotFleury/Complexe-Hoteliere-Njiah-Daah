@@ -10,3 +10,23 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@font-face {
+  font-family: "josefin-bold";
+  src: url(../fonts/JosefinSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "josefin-regular";
+  src: url(../fonts/JosefinSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "josefin-italic";
+  src: url(../fonts/JosefinSans-Italic.ttf);
+}
+
+:root {
+  --color1: rgb(123, 94, 94);
+  --color2: white;
+}
