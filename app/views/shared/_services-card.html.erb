@@ -1,0 +1,8 @@
+<div class="row card-container">
+  <% @services.each do |service| %>
+    <div>
+      <h2><%= service.name %></h2>
+      <p><%= service.description %></p>
+    </div>
+  <% end %>
+</div>

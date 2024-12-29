@@ -1,9 +1,17 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+# db/seeds.rb
+
+# Supprime les anciens services
+Service.destroy_all
+
+# Crée des nouveaux services
+services = [
+  { name: "chambre simple", description: "Une chambre simple avec lit confortable, TV et connexion Wi-Fi." },
+  { name: "chambre climatisée", description: "Une chambre avec climatisation, lit confortable, TV et connexion Wi-Fi." },
+  { name: "appartement meublé", description: "Un appartement entièrement meublé avec cuisine équipée, séjour, et chambre séparée." }
+]
+
+services.each do |service|
+  Service.create!(service)
+end
+
+puts "Services créés avec succès !"
