@@ -29,4 +29,15 @@
 :root {
   --color1: rgb(123, 94, 94);
   --color2: white;
+  --color3: rgb(217, 217, 217);
+}
+
+* {
+  font-family: "josefin-regular", sans-serif;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: "josefin-regular", sans-serif;
+  font-size: 1rem;
 }

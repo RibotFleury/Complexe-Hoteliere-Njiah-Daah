@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <%= form_with model: @commentaire, local: true, class: "needs-validation", novalidate: true do |f| %>
+        <div class="mb-3">
+          <%= f.label :service_id, "Service", class: "form-label" %>
+          <%= f.collection_select :service_id, Service.all, :id, :name, {}, class: "form-control form-select", required: true %>
+          <div class="invalid-feedback">Veuillez sélectionner un service.</div>
+        </div>
+        <div class="mb-3">
+          <%= f.label :contenu, "Commentaire", class: "form-label" %>
+          <%= f.text_area :contenu, class: "form-control", required: true %>
+          <div class="invalid-feedback">Veuillez écrire un commentaire.</div>
+        </div>
+        <div class="mb-3 button-form">
+          <%= f.submit 'Ajouter un commentaire', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

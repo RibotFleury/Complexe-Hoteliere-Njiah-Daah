@@ -1,0 +1,14 @@
+.notification-card {
+  font-family: "josefin-regular", sans-serif;
+  width: 80%;
+  margin: 100px auto;
+  background-color: var(--color1);
+  color: var(--color2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+}

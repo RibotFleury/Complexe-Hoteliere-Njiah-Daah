@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-container">
+  <h2>Bonjour <%= current_user ? current_user.nom : "Visiteur" %>! <i class="fa-sharp fa-solid fa-face-smile-wink"></i></h2>
+  <h1 class="home-card">La reference</h1>
+  <%= render "/shared/carousel-presentation-card" %>
+  <h1 class="home-card">Nos Services</h1>
+  <%= render "/shared/carousel-service-card" %>
+  <h1 class="home-card">Plus</h1>
+  <%= render "/shared/plus" %>
+  <h1 class="home-card">Chambre</h1>
+  <%= render "/shared/product-card" %>
+</div>
