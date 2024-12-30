@@ -1,1 +1,23 @@
 // Specific CSS for your home-page
+
+.home-container {
+  padding-top: 50px;
+
+  h1 {
+    background: var(--color1);
+    color: var(--color2);
+    padding: 10px;
+    margin-top: 20px;
+    font-family: "josefin-regular", sans-serif;
+  }
+
+  h2 {
+    color: var(--color1);
+    font-family: "josefin-regular", sans-serif;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-family: "josefin-regular", sans-serif;
+  }
+}

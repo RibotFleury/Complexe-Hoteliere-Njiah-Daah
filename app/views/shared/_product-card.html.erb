@@ -1,0 +1,16 @@
+<div class="card-container">
+  <div class="card">
+    <%= link_to services_index_path do %>
+      <%= image_tag "chambre.jpg", class: "d-block w-100", alt: "First slide" %>
+    <% end %>
+    <div class="card-body product-card">
+      <div class="info-left">
+        <h5 class="card-title">Voir nos chambres</h5>
+        <p class="card-text">A partir de 5000 FCFA.</p>
+      </div>
+      <div class="info-right">
+        <%= link_to "Reserver", reservations_new_path, class: "btn btn-primary", id: "reserver" %>
+      </div>
+    </div>
+  </div>
+</div>

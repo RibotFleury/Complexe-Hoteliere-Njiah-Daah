@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'comments/new'
-  get 'comments/success'
+
+  resources :commentaires, only: [:new, :create]
+  get 'comments/success', to: 'commentaires#success', as: 'comment_success'
   get 'reservations/new'
   get 'reservations/confirm'
   get 'reservations/success'

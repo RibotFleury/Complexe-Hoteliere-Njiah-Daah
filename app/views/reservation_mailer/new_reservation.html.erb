@@ -1,0 +1,12 @@
+<h1>Nouvelle Réservation</h1>
+<p>Une nouvelle réservation a été effectuée.</p>
+<p><strong>Service :</strong> <%= @reservation.service.name %></p>
+<p><strong>Client :</strong> <%= @reservation.user.nom %></p>
+<p><strong>Email :</strong> <%= @reservation.user.email %></p>
+<p><strong>Téléphone :</strong> <%= @reservation.user.telephone %></p>
+<p><strong>Date d'arrivée :</strong> <%= @reservation.date_debut %></p>
+<p><strong>Date de départ :</strong> <%= @reservation.date_fin %></p>
+<p><strong>Nombre d'adultes :</strong> <%= @reservation.nb_adulte %></p>
+<p><strong>Nombre d'enfants :</strong> <%= @reservation.nb_enfant %></p>
+<p><strong>Montant à payer :</strong> <%= @reservation.montant_a_payer %></p>
+<p><strong>Mode de paiement :</strong> <%= @reservation.mode_paiement %></p>
