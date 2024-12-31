@@ -43,10 +43,15 @@ h2 {
 }
 
 a {
-  text-decoration: none;
+
   color: var(--color1);
 
   i {
     font-weight: 900;
   }
+}
+
+#greetings-user {
+  font-size: 1.3rem;
+  font-weight: 900;
 }
