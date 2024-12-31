@@ -41,3 +41,12 @@ h2 {
   font-family: "josefin-regular", sans-serif;
   font-size: 1rem;
 }
+
+a {
+  text-decoration: none;
+  color: var(--color1);
+
+  i {
+    font-weight: 900;
+  }
+}

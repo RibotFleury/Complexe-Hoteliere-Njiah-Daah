@@ -5,6 +5,11 @@
   background-color: var(--color3);
   border-radius: 10px;
   color: var(--color1);
+  position: relative;
+
+  h3 {
+    font-weight: 900;
+  }
 
   .card-infos {
     border-radius: 10px;
