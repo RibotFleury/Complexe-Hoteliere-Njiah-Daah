@@ -1,5 +1,5 @@
 <div class="home-container">
-  <h2>Bonjour <%= current_user ? current_user.nom : "Visiteur" %>! <i class="fa-sharp fa-solid fa-face-smile-wink"></i></h2>
+  <h2 id="greetings-user">Bonjour <%= current_user ? current_user.nom : "Visiteur" %>! <i class="fa-sharp fa-solid fa-face-smile-wink"></i></h2>
   <h1 class="home-card">La reference</h1>
   <%= render "/shared/carousel-presentation-card" %>
   <h1 class="home-card">Nos Services</h1>
