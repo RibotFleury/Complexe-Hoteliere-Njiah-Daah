@@ -12,8 +12,8 @@
           <%= f.text_area :contenu, class: "form-control", required: true %>
           <div class="invalid-feedback">Veuillez écrire un commentaire.</div>
         </div>
-        <div class="mb-3 button-form">
-          <%= f.submit 'Ajouter un commentaire', class: 'btn btn-primary' %>
+        <div class="card-container-bottom">
+          <%= f.submit 'Ajouter un commentaire', class: 'btn btn-primary', id: 'commentaire' %>
         </div>
       <% end %>
     </div>

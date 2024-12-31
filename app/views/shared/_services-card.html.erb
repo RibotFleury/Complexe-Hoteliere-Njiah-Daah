@@ -1,8 +1,45 @@
-<div class="row card-container">
+<div class="row">
   <% @services.each do |service| %>
-    <div>
-      <h2><%= service.name %></h2>
-      <p><%= service.description %></p>
+    <div class="card-container">
+      <div class="card card-infos">
+        <%= link_to services_index_path do %>
+          <% if service.name == 'chambre simple' %>
+            <%= link_to reservations_new_path do %>
+              <%= image_tag "chambre.jpg", class: "d-block w-100", alt: service.name %>
+            <% end %>
+          <% elsif service.name == 'chambre climatisée' %>
+            <%= link_to reservations_new_path do %>
+              <%= image_tag "chambre-climatisee.jpg", class: "d-block w-100", alt: service.name %>
+            <% end %>
+          <% elsif service.name == 'appartement meublé' %>
+            <%= link_to reservations_new_path do %>
+              <%= image_tag "appartement.jpg", class: "d-block w-100", alt: service.name %>
+            <% end %>
+          <% else %>
+            <%= link_to reservations_new_path do %>
+              <%= image_tag "default.jpg", class: "d-block w-100", alt: service.name %>
+            <% end %>
+          <% end %>
+        <% end %>
+        <div class="card-body product-card">
+          <div class="info-left">
+            <h5 class="card-title"><%= service.name %></h5>
+            <p class="card-text"><%= service.description %></p>
+            <% if service.name == 'chambre simple' %>
+              <p class="card-text"><span>A partir de 5000 FCFA.</span></p>
+            <% elsif service.name == 'chambre climatisée' %>
+              <p class="card-text"><span>A partir de 7000 FCFA.</span></p>
+            <% elsif service.name == 'appartement meublé' %>
+              <p class="card-text"><span>A partir de 6000 FCFA.</span></p>
+            <% else %>
+              <p class="card-text"><span>A partir de 5000 FCFA.</span></p>
+            <% end %>
+          </div>
+          <div class="info-right">
+            <%= link_to "Reserver", reservations_new_path(service_id: service.id), class: "btn btn-primary", id: "reserver" %>
+          </div>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
