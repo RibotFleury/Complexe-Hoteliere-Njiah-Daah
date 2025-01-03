@@ -100,6 +100,7 @@ Rails.application.configure do
     address: 'smtp.gmail.com',
     port: 587,
     domain: 'residence-hoteliere-njiaahdaah-caa54db95b23.herokuapp.com',
+
     user_name: ENV['SMTP_USER_NAME'],
     password: ENV['SMTP_PASSWORD'],
     authentication: 'plain',
