@@ -22,8 +22,8 @@
 
   .card-container-top {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
 
     .image-card {
       #carouselExampleIndicators {
@@ -44,6 +44,14 @@
             }
           }
         }
+      }
+    }
+
+    .explanation {
+      padding-top: 10px;
+
+      p {
+        text-align: justify;
       }
     }
   }
