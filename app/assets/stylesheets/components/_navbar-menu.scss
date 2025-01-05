@@ -9,11 +9,19 @@
 
     i {
       color: rgb(123, 94, 94);
+
+      @media screen and (min-width: 575px) {
+        display: none;
+      }
     }
 
     a {
       color: rgb(123, 94, 94);
       font-weight: 900;
+
+      @media screen and (min-width: 575px) {
+        color: var(--color2);
+      }
     }
 
   }
@@ -29,3 +37,5 @@
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 575px) {}
