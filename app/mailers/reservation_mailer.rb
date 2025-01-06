@@ -1,9 +1,9 @@
 class ReservationMailer < ApplicationMailer
-  default from: 'fleurytene@gmail.com'
+  default from: 'njiahdaah.hotel@gmail.com'
   def new_reservation(reservation)
     @reservation = reservation
     mail(
-      to: 'fleurytene@gmail.com',
+      to: 'njiahdaah.hotel@gmail.com',
       subject: 'Nouvelle réservation'
     ) do |format|
       format.html
