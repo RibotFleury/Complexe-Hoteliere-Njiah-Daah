@@ -3,21 +3,21 @@
     <div class="card-container">
       <div class="card card-infos">
         <%= link_to services_index_path do %>
-          <% if service.name == 'chambre simple' %>
+          <% if service.name == 'Chambres haut standing' %>
             <%= link_to reservations_new_path do %>
               <%= image_tag "chambre.jpg", class: "d-block w-100", alt: service.name %>
             <% end %>
-          <% elsif service.name == 'chambre climatisée' %>
+          <% elsif service.name == 'Studios meublés' %>
             <%= link_to reservations_new_path do %>
               <%= image_tag "chambre-climatisee.jpg", class: "d-block w-100", alt: service.name %>
             <% end %>
-          <% elsif service.name == 'appartement meublé' %>
+          <% elsif service.name == 'Appartements meublés' %>
             <%= link_to reservations_new_path do %>
               <%= image_tag "appartement.jpg", class: "d-block w-100", alt: service.name %>
             <% end %>
           <% else %>
             <%= link_to reservations_new_path do %>
-              <%= image_tag "default.jpg", class: "d-block w-100", alt: service.name %>
+              <%= image_tag "carousel1.jpg", class: "d-block w-100", alt: service.name %>
             <% end %>
           <% end %>
         <% end %>
@@ -25,14 +25,14 @@
           <div class="info-left">
             <h5 class="card-title"><%= service.name %></h5>
             <p class="card-text"><%= service.description %></p>
-            <% if service.name == 'chambre simple' %>
-              <p class="card-text"><span>A partir de 5000 FCFA.</span></p>
-            <% elsif service.name == 'chambre climatisée' %>
-              <p class="card-text"><span>A partir de 7000 FCFA.</span></p>
-            <% elsif service.name == 'appartement meublé' %>
-              <p class="card-text"><span>A partir de 6000 FCFA.</span></p>
+            <% if service.name == 'Chambres haut standing' %>
+              <p class="card-text"><span>A partir de 30.000 FCFA.</span></p>
+            <% elsif service.name == 'Studios meublés' %>
+              <p class="card-text"><span>A partir de 35.000 FCFA.</span></p>
+            <% elsif service.name == 'Appartements meublés' %>
+              <p class="card-text"><span>A partir de 45.000 FCFA.</span></p>
             <% else %>
-              <p class="card-text"><span>A partir de 5000 FCFA.</span></p>
+              <p class="card-text"><span>Contacte nous pour plus d'informations.</span></p>
             <% end %>
           </div>
           <div class="info-right">
