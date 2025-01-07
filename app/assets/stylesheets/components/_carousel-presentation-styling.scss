@@ -21,9 +21,18 @@
   }
 
   .card-container-top {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
 
     .image-card {
       #carouselExampleIndicators {
@@ -52,6 +61,19 @@
 
       p {
         text-align: justify;
+
+        @media screen and (max-width: 768px) {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 8;
+          /* Number of lines you want to show */
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      ul {
+        display: none;
       }
     }
   }
