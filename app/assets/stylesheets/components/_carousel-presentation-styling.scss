@@ -164,4 +164,15 @@
       }
     }
   }
+
+  .video-container{
+    .video{
+      @media screen and (min-width: 575px) {
+        width: 100%;
+        height: 300px;
+        
+      }
+    }
+    
+  }
 }
