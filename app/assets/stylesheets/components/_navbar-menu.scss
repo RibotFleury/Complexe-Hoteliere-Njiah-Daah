@@ -20,6 +20,10 @@
 
     i {
       color: rgb(123, 94, 94);
+
+      @media screen and (min-width: 575px) {
+        display: none;
+      }
     }
 
     a {
@@ -28,6 +32,7 @@
 
       @media screen and (min-width: 575px) {
         color : var(--color3);
+        color: var(--color2);
         text-align: center;
 
         &:hover{
@@ -38,9 +43,7 @@
         }
       }
     }
-
   }
-
 }
 
 .menu-image {
@@ -52,3 +55,5 @@
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 575px) {}

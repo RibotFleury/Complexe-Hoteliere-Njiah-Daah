@@ -1,10 +1,10 @@
 class CommentaireMailer < ApplicationMailer
-  default from: 'fleurytene@gmail.com'
+  default from: 'njiahdaah.hotel@gmail.com'
 
   def new_commentaire(commentaire)
     @commentaire = commentaire
     mail(
-      to: 'fleurytene@gmail.com',
+      to: 'njiahdaah.hotel@gmail.com',
       subject: 'Nouveau Commentaire sur un service'
     ) do |format|
       format.html
