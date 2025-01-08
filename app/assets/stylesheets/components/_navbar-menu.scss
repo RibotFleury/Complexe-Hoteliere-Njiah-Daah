@@ -1,6 +1,17 @@
 .navbar-menu {
   width: 70% !important;
 
+  @media screen and (min-width: 575px) {
+    margin-left: 2rem;
+  }
+
+
+  ul{
+    @media screen and (min-width: 575px) {
+      display: flex;
+    }
+  }
+
   li {
     display: flex;
     justify-content: flex-start;
@@ -20,12 +31,19 @@
       font-weight: 900;
 
       @media screen and (min-width: 575px) {
+        color : var(--color3);
         color: var(--color2);
+        text-align: center;
+
+        &:hover{
+          transition: 0.2s;
+          background: var(--color2);
+          font-weight: bold;
+          border-radius: 5px; 
+        }
       }
     }
-
   }
-
 }
 
 .menu-image {

@@ -5,6 +5,12 @@
     font-weight: 900;
     text-align: center;
     color: var(--color1);
+
+    @media screen and (min-width: 575px) {
+      font-size: 30px;
+      margin-top: 3rem ;
+      margin-bottom: 2rem;;
+    }
   }
 }
 
@@ -21,4 +27,66 @@
   border: none;
   width: 100%;
   border-radius: 10px;
+}
+
+.compte, .simple_form, .share-links{
+
+  @media screen and (min-width: 575px) {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+
+  }
+}
+
+#new_user{
+
+  @media screen and (min-width: 575px) {
+    border-radius: 15px;
+    border : 1px solid var(--color1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #connexion,#creation,#reinitialisation,#reset{
+    @media screen and (min-width: 575px) {
+      &:hover{
+        background-color: var(--color4);
+      }
+    }
+  }
+}
+
+/* #connexion{
+  @media screen and (min-width: 575px) {
+    &:hover{
+      background-color: var(--color4);
+    }
+  }
+}
+ */
+
+.share-links{
+
+  @media screen and (min-width: 575px) {
+    display: flex;
+  }
+  
+  #connexion,#creation,#reinitialisation,#reset{
+    
+    @media screen and (min-width: 575px) {
+      display: block;
+      padding: 1px;
+      margin-top: 3px;
+      color: var(--color1);
+      background-color: transparent;
+
+      &:hover{
+        color : var(--color4);
+      }
+    }
+
+  }
+ 
 }

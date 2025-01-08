@@ -6,6 +6,12 @@
 
 .card-container {
   #coordonnees {
+    @media screen and (min-width: 575px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
     p {
       color: black;
     }

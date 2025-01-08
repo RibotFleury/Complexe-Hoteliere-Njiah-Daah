@@ -35,6 +35,22 @@
   }
 }
 
+
+.container-fluid{
+
+  @media screen and (min-width: 575px) {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .navbar-brand h1{
+    @media screen and (min-width: 575px) {
+      margin-right: 2rem;
+    }
+  }
+}
+
 // .navbar-toggler {
 //   position: absolute;
 //   // left: 10px;
