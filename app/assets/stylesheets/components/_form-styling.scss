@@ -36,3 +36,57 @@ form {
     border: none;
   }
 }
+
+.page-title, .row {
+
+  @media screen and (min-width: 575px) {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+
+  }
+}
+
+.page-title{
+
+  @media screen and (min-width: 575px) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  h1{
+    @media screen and (min-width: 575px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.row{
+
+  @media screen and (min-width: 575px) {
+    border-radius: 15px;
+    border : 1px solid var(--color1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+}
+
+#reserver{
+  @media screen and (min-width: 575px) {
+    &:hover{
+      background-color: var(--color4);
+      transition: 0.2s;
+    }
+  }
+}
+
+#annuler{
+  @media screen and (min-width: 575px) {
+    &:hover{
+      background-color: #f32f2f;
+      transition: 0.2s;
+    }
+  }
+}
+
