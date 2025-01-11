@@ -21,18 +21,9 @@
   }
 
   .card-container-top {
-    // display: grid;
-    // grid-template-columns: 1fr;
-    // grid-template-rows: 1fr 1fr;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: justify;
-
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
 
     @media screen and (min-width: 575px) {
       display: flex;
@@ -67,19 +58,6 @@
 
       p {
         text-align: justify;
-
-        @media screen and (max-width: 768px) {
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 8;
-          /* Number of lines you want to show */
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-      }
-
-      ul {
-        display: none;
       }
     }
   }
@@ -97,19 +75,18 @@
       @media screen and (min-width: 575px) {
         font-size: 20px;
         width: 30%;
-        font-weight: 900;        
+        font-weight: 900;
         display: block;
         margin: 0 auto;
 
-        &:hover{
+        &:hover {
           transition: 0.1s;
           background-color: var(--color4);
           color: white;
-          border-radius: 15px;
+          border-radius: 12px;
         }
       }
     }
-
   }
 
   .plus-container {
@@ -118,9 +95,8 @@
     align-items: center;
     gap: 20px;
     @media screen and (min-width: 575px) {
-      gap : 3rem
+      gap: 3rem;
     }
-
 
     .plus {
       display: grid;
@@ -133,11 +109,10 @@
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
-        align-items: center
+        align-items: center;
       }
 
-      img{
-
+      img {
         @media screen and (min-width: 575px) {
           height: 80px;
           width: 130px;
@@ -156,10 +131,6 @@
     align-items: flex-end;
     color: var(--color1);
 
-    .info-left {
-      color: black;
-    }
-
     h5 {
       font-weight: 900;
     }
@@ -171,34 +142,14 @@
         font-weight: 900;
       }
     }
-
-    #reserver {
-      color: var(--color2);
-      background-color: var(--color1);
-      border: none;
-
-      @media screen and (min-width: 575px) {
-        font-size: 20px;
-        font-weight: 900;
-
-        &:hover{
-          transition: 0.1s;
-          background-color: var(--color4);
-          color: white;
-          border-radius: 5px;
-        }
-      }
-    }
   }
 
-  .video-container{
-    .video{
+  .video-container {
+    .video {
       @media screen and (min-width: 575px) {
         width: 100%;
-        height: 300px;
-        
+        height: 400px;
       }
     }
-    
   }
 }

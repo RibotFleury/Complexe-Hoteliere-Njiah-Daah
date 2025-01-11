@@ -9,6 +9,11 @@
     padding: 10px;
     margin-top: 20px;
     font-family: "josefin-regular", sans-serif;
+
+    @media screen and (min-width: 575px) {
+      font-size: 30px;
+      font-weight: 900;
+    }
   }
 
   h2 {

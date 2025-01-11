@@ -9,9 +9,20 @@
   padding: 10px;
   margin-top: 20px;
 
+  @media screen and (min-width: 575px) {
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 80%;
+  }
+
   h1 {
     font-family: "josefin-bold", sans-serif;
     // font-weight: 800;
     font-size: 1rem;
+    @media screen and (min-width: 575px) {
+      font-weight: 900;
+      font-size: 1.5rem;
+    }
   }
 }
