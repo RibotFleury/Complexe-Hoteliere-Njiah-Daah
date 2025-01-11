@@ -17,13 +17,14 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      column-gap: 20px;
-      width: 80%;
+      column-gap: 40px;
+      width: 95%;
+      font-size: 20px;
       margin: 0 auto;
     }
 
     p {
-      color: black;
+      color: var(--color1);
     }
   }
 }
