@@ -7,12 +7,57 @@
   margin-bottom: 20px;
   font-family: "josefin-regular", sans-serif;
 
+  .location-info {
+    @media screen and (min-width: 575px) {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      height: 50px;
+      width: 100%;
+      /* Full width of its parent */
+      // white-space: nowrap;
+    }
+
+    p {
+      font-weight: 100;
+      text-align: center;
+      @media screen and (min-width: 575px) {
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        font-weight: 200;
+        line-height: 50px;
+        text-align: center;
+        transform: translateX(50%);
+        animation: bouncing-text 20s ease-in-out infinite alternate;
+      }
+    }
+
+    @keyframes bouncing-text {
+      0% {
+        transform: translateX(50%);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  }
+
   p {
     font-weight: 900;
     font-size: 1rem;
 
     i {
       color: var(--color1);
+    }
+  }
+
+  .contact-me {
+    @media screen and (min-width: 575px) {
+      display: flex;
+      justify-content: space-around;
+      width: 40%;
     }
   }
 
@@ -30,5 +75,96 @@
 .images-card {
   img {
     border-radius: 10px;
+  }
+}
+
+#carouselExampleIndicators {
+  @media screen and (min-width: 575px) {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.comment {
+  display: none;
+
+  @media screen and (min-width: 575px) {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-family: "josefin-regular", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 120px 25px 120px 20px;
+    background-color: var(--color3);
+    line-height: 35px;
+  }
+
+  p {
+    @media screen and (min-width: 575px) {
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      margin: auto;
+      color: var(--color1);
+      font-size: 15px;
+    }
+  }
+}
+
+#services {
+  @media screen and (min-width: 575px) {
+    display: flex;
+    row-gap: 1rem;
+
+    border-radius: 0px;
+    border: none;
+    background-color: none;
+    box-shadow: none;
+    width: 90%;
+  }
+
+  .card-container {
+    @media screen and (min-width: 575px) {
+      padding: 0;
+      width: 100%;
+    }
+
+    .card-infos {
+      @media screen and (min-width: 575px) {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+      }
+
+      img {
+      }
+
+      .card-body {
+        @media screen and (min-width: 575px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        }
+
+        .card-text {
+          text-align: justify;
+          margin-top: 1rem;
+          font-size: 15px;
+        }
+      }
+
+      .info-left {
+        @media screen and (min-width: 575px) {
+        }
+
+        .p {
+          @media screen and (min-width: 575px) {
+            text-align: justify;
+          }
+        }
+      }
+    }
   }
 }

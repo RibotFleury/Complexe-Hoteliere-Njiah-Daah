@@ -3,7 +3,6 @@ form {
 
   label {
     color: var(--color1);
-
   }
 
   select,
@@ -37,64 +36,51 @@ form {
 
     @media screen and (min-width: 575px) {
       border-radius: 5px;
-  
-      &:hover{
-        background-color : var(--color4);
+      width: auto;
+      display: block;
+      margin: auto;
+
+      &:hover {
+        background-color: var(--color4);
         transition: 0.2s;
       }
     }
-
   }
 }
 
-.page-title, .row {
-
+.row,
+.container {
   @media screen and (min-width: 575px) {
     display: block;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
-
   }
 }
-
-.page-title{
-
-  @media screen and (min-width: 575px) {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  h1{
-    @media screen and (min-width: 575px) {
-      font-size: 20px;
-    }
-  }
+.container {
+  background-image: "/app/assets/images/1.jpg";
 }
-
-.row{
-
+.row {
   @media screen and (min-width: 575px) {
     border-radius: 15px;
-    border : 1px solid var(--color1);
+    border: 1px solid var(--color1);
     padding: 1rem;
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-
 }
 
-#reserver{
+#reserver {
   @media screen and (min-width: 575px) {
-    &:hover{
+    &:hover {
       background-color: var(--color4);
       transition: 0.2s;
     }
   }
 }
 
-#annuler{
+#annuler {
   @media screen and (min-width: 575px) {
-    &:hover{
+    &:hover {
       background-color: #f32f2f;
       transition: 0.2s;
     }

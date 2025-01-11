@@ -45,7 +45,6 @@ h2 {
 }
 
 a {
-
   color: var(--color1);
 
   i {
@@ -56,4 +55,15 @@ a {
 #greetings-user {
   font-size: 1.3rem;
   font-weight: 900;
+  margin-top: 0px;
+}
+
+#hotel-ranking {
+  display: none;
+  @media screen and (min-width: 575px) {
+    display: block;
+    margin-top: 4rem;
+    text-align: center;
+    color: var(--color1);
+  }
 }
