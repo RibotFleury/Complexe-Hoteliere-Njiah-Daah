@@ -9,4 +9,13 @@
   i {
     color: var(--color2);
   }
+
+  a {
+    @media screen and (min-width: 575px) {
+      font-size: 35px;
+      &:hover {
+        color: var(--color1);
+      }
+    }
+  }
 }
