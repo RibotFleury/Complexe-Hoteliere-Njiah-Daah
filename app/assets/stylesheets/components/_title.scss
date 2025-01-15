@@ -11,7 +11,7 @@
 
   @media screen and (min-width: 575px) {
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 150px;
     margin-bottom: 1rem;
     width: 80%;
   }
@@ -20,6 +20,7 @@
     font-family: "josefin-bold", sans-serif;
     // font-weight: 800;
     font-size: 1rem;
+
     @media screen and (min-width: 575px) {
       font-weight: 900;
       font-size: 1.5rem;

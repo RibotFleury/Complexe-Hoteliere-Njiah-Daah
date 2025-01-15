@@ -13,17 +13,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'cards', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'reservations', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
-    <p id="hotel-ranking">
-      <i class="fa-solid fa-star"></i> 
-      <i class="fa-solid fa-star"></i> 
-      <i class="fa-solid fa-star"></i> 
-      <i class="fa-solid fa-star"></i> 
-      <i class="fa-regular fa-star"></i>
-    </p>
+    <% if controller_name == 'pages' && action_name == 'home' %>
+      <%= render "shared/home-header" %>
+    <% end %>
     <div class="content-wrapper container">
       <%= yield %>
     </div>

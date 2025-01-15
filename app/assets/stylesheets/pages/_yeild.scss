@@ -1,3 +1,15 @@
 .content-wrapper {
-  min-height: calc(100vh - 70px - 80px);
+  min-height: calc(100vh - 80px - 80px);
+  max-width: 1500px;
+  /* Vous pouvez ajuster cette valeur selon vos besoins */
+  margin: 0 auto;
+  /* Centrer le contenu */
+  // padding: 20px;
+  /* Ajouter du padding pour espacer le contenu */
+  // background-color: linear-gradient(135deg, var(--color1), var(--color2));
+  /* Optionnel : Ajouter un fond blanc */
+  border-radius: 10px;
+  /* Optionnel : Ajouter des coins arrondis */
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optionnel : Ajouter une ombre portée */
 }

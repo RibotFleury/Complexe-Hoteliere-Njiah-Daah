@@ -1,13 +1,11 @@
-<div class="card-container">
-  <div class="card-container-top">
-    <div class="explanation">
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat deleniti sint libero voluptates cupiditate aliquid incidunt cumque qui quas facere!</p>
-    </div>
-
-    <div class="video-container">
-      <%= video_tag "info-video.mp4", :size => "320x240", :controls => true , class:"video"  %>
+<div class="information-container">
+  <div class="text-side card-text">
+    <h3 class="section-title">Dernières Actualités</h3>
+    <div class="card-text">
+      Restez informé avec nos dernières nouvelles et actualités. Découvrez les événements récents, les développements économiques, politiques et culturels qui façonnent notre monde.
     </div>
   </div>
-
- 
+  <div class="video-side">
+    <%= video_tag "info-video.mp4", :size => "320x240", :controls => true , class:"video" %>
+  </div>
 </div>

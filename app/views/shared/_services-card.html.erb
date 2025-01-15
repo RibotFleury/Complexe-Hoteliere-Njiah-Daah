@@ -1,25 +1,73 @@
-<div class="row" id="services">
+<div id="services">
   <% @services.each do |service| %>
     <div class="card-container">
       <div class="card card-infos">
         <%= link_to services_index_path do %>
-          <% if service.name == 'Chambres haut standing' %>
-            <%= link_to reservations_new_path do %>
-              <%= image_tag "chambre.jpg", class: "d-block w-100", alt: service.name %>
-            <% end %>
-          <% elsif service.name == 'Studios meublés' %>
-            <%= link_to reservations_new_path do %>
-              <%= image_tag "chambre-climatisee.jpg", class: "d-block w-100", alt: service.name %>
-            <% end %>
-          <% elsif service.name == 'Appartements meublés' %>
-            <%= link_to reservations_new_path do %>
-              <%= image_tag "appartement.jpg", class: "d-block w-100", alt: service.name %>
-            <% end %>
-          <% else %>
-            <%= link_to reservations_new_path do %>
-              <%= image_tag "carousel1.jpg", class: "d-block w-100", alt: service.name %>
-            <% end %>
-          <% end %>
+          <div id="carousel-<%= service.id %>" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <% if service.name == 'Chambres haut standing' %>
+                <div class="carousel-item active">
+                  <%= image_tag "img-ch1.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag "img-ch2.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag "img-ch3.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag "img-ch4.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+              <% elsif service.name == 'Studios meublés' %>
+                <div class="carousel-item active">
+                  <%= image_tag "studio1.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag "studio2.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag "studio3.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag "studio4.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+              <% elsif service.name == 'Appartements meublés' %>
+                <div class="carousel-item active">
+                  <%= image_tag "studio1.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag "studio2.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag "studio3.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag "studio4.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+              <% else %>
+                <div class="carousel-item active">
+                  <%= image_tag "img-ch1.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag "img-ch1.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag "img-ch1.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag "img-ch1.jpg", class: "d-block w-100", alt: service.name %>
+                </div>
+              <% end %>
+            </div>
+            <a class="carousel-control-prev" href="#carousel-<%= service.id %>" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon icon-direct" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-<%= service.id %>" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon icon-direct" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         <% end %>
         <div class="card-body product-card">
           <div class="info-left">
