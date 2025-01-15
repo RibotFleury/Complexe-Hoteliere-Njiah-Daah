@@ -27,10 +27,12 @@
 }
 
 :root {
-  --color1: rgb(123, 94, 94);
+  // --color1: rgb(123, 94, 94);
+  --color1: #572515;
   --color2: white;
   --color3: rgb(217, 217, 217);
-  --color4: #572515;
+  --color4: #e99e86;
+  --color5: #eb7e5a;
   --media-query-limit1: 575px;
 }
 
@@ -60,6 +62,7 @@ a {
 
 #hotel-ranking {
   display: none;
+
   @media screen and (min-width: 575px) {
     display: block;
     margin-top: 4rem;

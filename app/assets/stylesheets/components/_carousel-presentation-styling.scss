@@ -13,57 +13,183 @@
 
   .card-infos {
     border-radius: 10px;
-    box-shadow: inset 5px -4px 16px 0px var(--color1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 450px;
+    /* Fixer la hauteur maximale de la carte */
+    max-height: 500px;
+    /* Assurer que la carte ne dépasse pas cette hauteur */
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 
     img {
-      border-radius: 10px;
+      border-radius: 10px 10px 0 0;
+      transition: transform 0.3s ease;
+      height: 200px;
+      /* Fixer la hauteur de l'image */
+      object-fit: cover;
+      /* Assurer que l'image s'ajuste à l'intérieur de la carte */
+      width: 100%;
+      /* Assurer que l'image prend toute la largeur de la carte */
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 
+
   .card-container-top {
-    /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr; */
 
     @media screen and (min-width: 575px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
 
     .image-card {
-      #carouselExampleIndicators {
-        height: 100%;
-
-        .carousel-inner {
-          height: 100%;
-
-          .carousel-item {
-            height: 100%;
-
-            img {
-              height: 100%;
-            }
-
-            .carousel-caption {
-              display: block !important;
-            }
-          }
-        }
-      }
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* Centrer le contenu textuel si nécessaire */
     }
+
+    .carousel-inner {
+      width: 100%;
+    }
+
+    .carousel-item {
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      // background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    .carousel-control-prev .fa,
+    .carousel-control-next .fa {
+      color: var(--color2);
+      border-radius: 50px;
+      padding: 20px;
+      background-color: var(--color1);
+      border: 1px solid var(--color2);
+      margin: 10px;
+      /* Ajout de marge pour éviter que le cercle touche les bords */
+    }
+
+    .carousel-control-prev {
+      left: 30px;
+      /* Ajustement de la position pour éviter le bord gauche */
+    }
+
+    .carousel-control-next {
+      right: 30px;
+      /* Ajustement de la position pour éviter le bord droit */
+    }
+
+    .carousel-inner {
+      border-radius: 10px;
+    }
+
+    .carousel-item {
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      // background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    .carousel-control-prev:hover .carousel-control-prev-icon,
+    .carousel-control-next:hover .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .icon-direct {
+      color: var(--color2);
+      border-radius: 50px;
+      padding: 20px;
+      background-color: var(--color1);
+      border: 1px solid var(--color2);
+    }
+
 
     .explanation {
       padding-top: 10px;
+
+      .card-title {
+        font-size: 1.5em;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+
+      .card-text {
+        font-size: 1em;
+        line-height: 1.5;
+        text-align: justify;
+        padding: 1em;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateX(50px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+
+      .card-text.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
 
       @media screen and (max-width: 574px) {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 4; /* number of lines to show */
+        -webkit-line-clamp: 4;
+        /* number of lines to show */
         line-clamp: 2;
         -webkit-box-orient: vertical;
         font-size: 20px;
+
       }
 
       p {
@@ -110,135 +236,96 @@
     }
   }
 
+  .card-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
   .plus-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
+
     @media screen and (min-width: 575px) {
       gap: 3rem;
     }
+  }
 
-    .plus {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-      justify-content: center;
-      justify-items: center;
+  .plus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    gap: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    img.avatar {
+      width: 100px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
       @media screen and (min-width: 575px) {
-        display: flex;
-        flex-direction: column;
-        row-gap: 1rem;
-        align-items: center;
-      }
-
-      img {
-        @media screen and (min-width: 575px) {
-          height: 80px;
-          width: 130px;
-        }
-      }
-
-      h3 {
-        padding-top: 5px;
+        width: 130px;
+        height: auto;
       }
     }
+
+    h3 {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #333;
+    }
   }
+
 
   .product-card {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 15px;
     color: var(--color1);
 
-    h5 {
-      font-weight: 900;
-    }
+    .info-left {
+      text-align: left;
 
-    p {
-      font-size: 0.8rem;
-
-      span {
+      .card-title {
         font-weight: 900;
+        font-size: 1.2em;
+      }
+
+      .card-text {
+        font-size: 0.9rem;
+      }
+    }
+
+    .info-right {
+      text-align: right;
+
+      .btn-primary {
+        background-color: var(--color1);
+        border: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: var(--color2);
+        }
       }
     }
   }
 
-  .video-container {
-    .video {
-      width: 100%;
-      @media screen and (min-width: 575px) {
-        height: 400px;
-      }
-    }
-  }
-}
-
-.home-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: image-url("vueDeFace3.jpg") center/cover no-repeat;
-  /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
-  margin-top: 10px;
-  height: 40rem;
-  color: var(--color2);
-  padding: 50px;
-
-  @media screen and (min-width: 575px) {
-    margin-top: -45px;
-  }
-
-  .main-header {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-  }
-  #hotel-ranking {
-    display: block;
-    font-size: 2rem;
-    text-align: center;
-    color: var(--color2);
-
-    @media screen and (min-width: 575px) {
-      font-size: 3rem;
-    }
-  }
-
-  h1 {
-    text-shadow: 2px 5px 4px rgba(255, 255, 255, 0.7);
-    text-align: center;
-    font-weight: 900;
-    font-size: 25px;
-    @media screen and (min-width: 575px) {
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
-  }
-
-  #reserver {
-    background-color: var(--color1);
-    font-size: 1rem;
-    border: 1px solid var(--color1);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    border-radius: 10px;
-
-    user-select: none;
-    cursor: pointer;
-    transition: 0.2s;
-    display: block;
-    width: 40%;
-    margin: 0 auto;
-    margin-top: 2rem;
-
-    &:hover {
-      background-color: var(--color4);
-    }
-    @media screen and (min-width: 575px) {
-      padding: 15px;
-    }
-  }
 }

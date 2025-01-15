@@ -1,15 +1,19 @@
 <div class="location">
   <div class="location-info">
+    <h3>Notre Emplacement</h3>
     <p>
-      Situé a Foto, Dschang, Cameroun
-      non loin du musée des civilisations de la Mœenoua,
-      Apres le Carrefour Albert Camus.
+      Situé à Foto, Dschang, Cameroun, non loin du musée des civilisations de la Mœenoua, après le Carrefour Albert Camus.
     </p>
-
   </div>
-  <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i></p>
+  <div class="stars">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+  </div>
   <div class="contact-me">
-    <a href="tel:+237675721584", class="btn btn-info", id="appelle">Appelle-nous</a>
-    <%= link_to "Reserver", reservations_new_path, class: "btn btn-primary", id: "reserver" %>
+    <a href="tel:+237675721584" class="btn btn-info" id="appelle"><i class="fa-solid fa-phone-volume"></i> Appelle-nous</a>
+    <%= link_to "Réserver <i class='fas fa-calendar-check'></i>".html_safe, reservations_new_path, class: "btn btn-primary", id: "reserver" %>
   </div>
 </div>

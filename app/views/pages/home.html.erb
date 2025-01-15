@@ -1,17 +1,3 @@
-<div class="home-header">
-  <div class="main-header">
-    <p id="hotel-ranking">
-      <i class="fa-solid fa-star"></i> 
-      <i class="fa-solid fa-star"></i> 
-      <i class="fa-solid fa-star"></i> 
-      <i class="fa-solid fa-star"></i> 
-      <i class="fa-regular fa-star"></i>
-    </p>
-    <h1>Votre confort, notre satisfaction  </h1>
-    <%= link_to "Reserver", reservations_new_path, class: "btn btn-primary", id: "reserver" %>
-  </div>
-</div>
-
 <div class="home-container">
   <h2 id="greetings-user">Bonjour <%= current_user ? current_user.nom : "Visiteur" %>! <i class="fa-sharp fa-solid fa-face-smile-wink"></i></h2>
   <h1 class="home-card">La reference</h1>
@@ -21,7 +7,7 @@
   <h1 class="home-card">Plus</h1>
   <%= render "/shared/plus" %>
   <h1 class="home-card">Chambre</h1>
-  <%= render "/shared/product-card" %>
+  <%= render "/shared/services-card" %>
   <h1 class="home-card">Informations</h1>
   <%= render "/shared/information-card" %>
 </div>

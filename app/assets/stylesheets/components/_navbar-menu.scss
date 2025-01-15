@@ -7,12 +7,12 @@
   }
 
 
-  ul{
+  ul {
 
     @media screen and (min-width: 575px) {
       display: flex;
       justify-content: space-around;
-      width: 70%;
+      width: 100%;
     }
   }
 
@@ -23,27 +23,28 @@
     gap: 4px;
 
     i {
-      color: rgb(123, 94, 94);
+      color: var(--color1);
 
       @media screen and (min-width: 575px) {
-        display: none;
+        // display: none;
+        color: var(--color2);
       }
     }
 
     a {
-      color: rgb(123, 94, 94);
+      color: var(--color1);
       font-weight: 900;
 
       @media screen and (min-width: 575px) {
-        color : var(--color3);
+        color: var(--color3);
         color: var(--color2);
         text-align: center;
+        transition: 0.5s ease;
 
-        &:hover{
-          transition: 0.2s;
+        &:hover {
           background: var(--color2);
-          font-weight: bold;
-          border-radius: 5px; 
+          border-radius: 5px;
+          transform: scaleX(1.05);
         }
       }
     }

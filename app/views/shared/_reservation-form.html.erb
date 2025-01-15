@@ -4,17 +4,17 @@
       <%= form_with model: @reservation, local: true, class: "needs-validation", novalidate: true do |f| %>
         <div class="mb-3">
           <%= f.label :service_id, "Service", class: "form-label" %>
-          <%= f.collection_select :service_id, Service.all, :id, :name, {}, class: "form-control form-select", required: true %>
+          <%= f.collection_select :service_id, Service.all, :id, :name, {}, class: "form-control form-select", required: true, id: "reservation_service_id" %>
           <div class="invalid-feedback">Veuillez sélectionner un service.</div>
         </div>
         <div class="mb-3">
           <%= f.label :date_debut, "Date d'arrivée", class: "form-label" %>
-          <%= f.date_field :date_debut, class: "form-control", required: true %>
+          <%= f.date_field :date_debut, class: "form-control", required: true, id: "reservation_date_debut" %>
           <div class="invalid-feedback">Veuillez sélectionner une date d'arrivée.</div>
         </div>
         <div class="mb-3">
           <%= f.label :date_fin, "Date de départ", class: "form-label" %>
-          <%= f.date_field :date_fin, class: "form-control", required: true %>
+          <%= f.date_field :date_fin, class: "form-control", required: true, id: "reservation_date_fin" %>
           <div class="invalid-feedback">Veuillez sélectionner une date de départ.</div>
         </div>
         <div class="mb-3">
@@ -34,12 +34,12 @@
         </div>
         <div class="mb-3">
           <%= f.label :montant_a_payer, "Montant net à payer", class: "form-label" %>
-          <%= f.number_field :montant_a_payer, class: "form-control", readonly: true %>
+          <%= f.number_field :montant_a_payer, class: "form-control", readonly: true, id: "reservation_montant_a_payer" %>
           <div class="invalid-feedback">Le montant sera calculé automatiquement.</div>
         </div>
         <div class="mb-3 button-form">
           <%= f.submit "Annuler", class: "btn btn-danger", type: "reset", id: "annuler" %>
-          <%= f.submit "Réserver", class: "btn btn-primary", id: "reserver" %>
+          <%= f.submit "Réserver", class: "btn btn-primary", id: "reserverButton" %>
         </div>
       <% end %>
     </div>

@@ -28,7 +28,23 @@ class ReservationsController < ApplicationController
   private
 
   def calculer_montant(reservation)
-    100.0
+    # Calcule la durée du séjour en jours (minimum 1 jour)
+    duree_sejour = [(reservation.date_fin - reservation.date_debut).to_i, 1].max
+
+    # Tarif journalier selon le service sélectionné
+    tarif_journalier = case reservation.service_id
+                       when Service.find_by(name: "Chambres haut standing").id
+                         30_000
+                       when Service.find_by(name: "Studios meublés").id
+                         35_000
+                       when Service.find_by(name: "Appartements meublés").id
+                         45_000
+                       else
+                         0 # Si le service n'est pas reconnu
+                       end
+
+    # Montant total = tarif journalier * durée du séjour
+    tarif_journalier * duree_sejour
   end
 
   def reservation_params
